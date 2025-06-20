@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <title>QuickBite Project Explanation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      direction: rtl;
+    }
+    h2 {
+      color: #b41e1e;
+    }
+    ul {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍔 QuickBite - Online Food Order Website (تین صفحات کی وضاحت)</h1>
+
+  <h2>📄 Page 1: index.html (مینیو صفحہ)</h2>
+  <ul>
+    <li>یہ صفحہ تمام کھانوں (Burger, Pizza, Biryani) کی لسٹ دکھاتا ہے۔</li>
+    <li>Data ایک Array of Objects میں ہوتا ہے جسے JavaScript سے loop کر کے HTML میں دکھایا جاتا ہے۔</li>
+    <li>ہر کھانے کے ساتھ تصویر، نام، قیمت اور "Add to Cart" کا بٹن ہوتا ہے۔</li>
+    <li>جب بٹن دبایا جائے تو وہ item localStorage میں add ہو جاتا ہے۔</li>
+  </ul>
+
+  <h2>🛒 Page 2: cart.html (کارٹ صفحہ)</h2>
+  <ul>
+    <li>یہ صفحہ صرف وہ کھانے دکھاتا ہے جو آپ نے "Add to Cart" کیے ہوں۔</li>
+    <li>localStorage سے تمام items read کیے جاتے ہیں اور table یا card کی صورت میں دکھائے جاتے ہیں۔</li>
+    <li>ہر item کے ساتھ quantity بڑھانے/کم کرنے کے بٹن اور remove کا option ہوتا ہے۔</li>
+    <li>آخر میں total price بھی calculate ہو کر دکھایا جاتا ہے۔</li>
+  </ul>
+
+  <h2>✅ Page 3: order.html (آرڈر کنفرمیشن صفحہ)</h2>
+  <ul>
+    <li>یہ صفحہ "Place Order" کا بٹن رکھتا ہے۔</li>
+    <li>جب آپ بٹن پر کلک کرتے ہیں تو async/await کے ذریعے ایک fake API (jsonplaceholder) کو کال کیا جاتا ہے۔</li>
+    <li>loading spinner دکھایا جاتا ہے جب تک آرڈر "بھیجا" جا رہا ہو۔</li>
+    <li>کچھ سیکنڈ کے بعد message آتا ہے: "Your Order Has Been Placed!"</li>
+    <li>پھر optionally cart کو clear کر دیا جاتا ہے۔</li>
+  </ul>
+
+</body>
+</html>
