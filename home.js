@@ -1,8 +1,3 @@
-//the  search  Btn and Input 
-let searc = document.querySelector(".form-control")
-let searchBtn = document.querySelector(".btn ")
-
-
 //Detail  of  food
 
 let foodDetail = [
@@ -134,7 +129,6 @@ let foodDetail = [
 
 //head  container of  cards
 let container = document.querySelector("#container");
-console.log(container)
 
 //to peint   the  data in multiple  cards
 for (let i = 0; i < foodDetail.length; i++) {
@@ -152,60 +146,148 @@ for (let i = 0; i < foodDetail.length; i++) {
 
     container.appendChild(card);
 }
-//Add to cart btn
-let butt = document.querySelector(".btn");
-let button = document.querySelectorAll(".btn")
 
-console.log(butt)
+//the  search  Form 
+let formsearch = document.querySelector("#formsearch");
 
-button.forEach((butt) => {
-    butt.addEventListener("click", (e) => {
-        //data  of  add to  Cart
-
-        let quantity;
-
-        if (e.target.classList.contains("add-to-cart")) {
-            let index = Number(e.target.getAttribute("data-index"));
-            let item = foodDetail[index];
-
-            let userShoping = JSON.parse(sessionStorage.getItem("userShoping") || "[]");
-            let Find = userShoping.findIndex(d => d.Img === item.Img);
+formsearch.addEventListener("submit", (event) => {
+    event.preventDefault();//to save    the load
 
 
+    let searc = document.querySelector(".form-control").value.trim().toLowerCase();
+    let search = searc.slice(0, 3);
+    let Title = foodDetail.filter(t => t.title.slice(0, 3).toLowerCase() === search);
+
+    if (Title.length > 0) {
 
 
-            if (Find !== -1) {
-                userShoping[Find].quantity += 1;
-                quantity = userShoping[Find].quantity;
+        container.innerHTML = ``;
 
-            } else {
+        for (let i = 0; i < Title.length; i++) {
+ 
+            let card = document.createElement("div");
+ 
+            card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
+ 
+            card.innerHTML = `<img src=${Title[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
+        <div class="card-body  container-fluid   ">
+          <h5 class="card-title">${Title[i].title}</h5>
+          <p class="card-text">${Title[i].prise}</p>
+          <p   class="count" ></p>
+          <button   class="btn w-100 btn-primary  add-to-cart"  data-index="${i}">Add  to  Cart </button>
+        </div>`
+ 
+            container.appendChild(card);
 
-                let data = {
-                    Img: item.Img,
-                    title: item.title,
-                    prise: item.prise,
-                    quantity: 1
-
-                }
-                userShoping.push(data)
-                quantity = 1;
+          
+            
+ 
+ 
+        }
+ 
 
             }
+          
 
-            
-                    sessionStorage.setItem("userShoping", JSON.stringify(userShoping));
-            
-                    let count = e.target.parentElement.querySelector(".count");
-                    count.innerHTML ="Quantitygit"+ quantity;
+
+
+    else if (searc === "all"  ||    searc === ""  ) {
+        container.innerHTML = ``;
+
+        for (let i = 0; i < foodDetail.length; i++) {
+
+            let card = document.createElement("div");
+
+            card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
+
+            card.innerHTML = `<img src=${foodDetail[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
+        <div class="card-body  container-fluid   ">
+          <h5 class="card-title">${foodDetail[i].title}</h5>
+          <p class="card-text">${foodDetail[i].prise}</p>
+          <p   class="count" ></p>
+          <button   class="btn w-100 btn-primary  add-to-cart"  data-index="${i}">Add  to  Cart </button>
+        </div>`
+
+            container.appendChild(card)
+
         }
-    })
+    }
+    else  if(Title.title!==searc)  {
+       alert(`Not Availabel  `) 
 
+       container.innerHTML = ``;
+
+       for (let i = 0; i < foodDetail.length; i++) {
+
+           let card = document.createElement("div");
+
+           card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
+
+           card.innerHTML = `<img src=${foodDetail[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
+       <div class="card-body  container-fluid   ">
+         <h5 class="card-title">${foodDetail[i].title}</h5>
+         <p class="card-text">${foodDetail[i].prise}</p>
+         <p   class="count" ></p>
+         <button   class="btn w-100 btn-primary  add-to-cart"  data-index="${i}">Add  to  Cart </button>
+       </div>`
+
+           container.appendChild(card)
+
+
+       }
+
+    }
+    });
+
+
+
+
+
+
+
+
+//Add to cart btn
+//Add   To  Cart    Logics
+container.addEventListener("click", (e) => {
+
+    if (e.target.classList.contains("add-to-cart")) {
+        let index = Number(e.target.getAttribute("data-index"));
+        let item = foodDetail[index];
+
+        let userShoping = JSON.parse(sessionStorage.getItem("userShoping") || "[]");
+        let Find = userShoping.findIndex(d => d.Img === item.Img);
+
+        let quantity;
+        if (Find !== -1) {
+            userShoping[Find].quantity += 1;
+            quantity = userShoping[Find].quantity;
+        } else {
+            let data = {
+                Img: item.Img,
+                title: item.title,
+                prise: item.prise,
+                quantity: 1
+            };
+            userShoping.push(data);
+            quantity = 1;
+        }
+
+        sessionStorage.setItem("userShoping", JSON.stringify(userShoping));
+
+        let count = e.target.parentElement.querySelector(".count");
+        count.innerHTML = "Quantity : " + quantity;
+
+        // Update cart item count
+        let btnItem = document.querySelector("#Items");
+        let total = userShoping.reduce((sum, item) => sum + item.quantity, 0);
+        btnItem.innerHTML = `Items : ${total}`;
+    }
+});
+
+let   Logout= document.querySelector("#Logout");
+
+Logout.addEventListener("click",()=>{
+window.location.href="index.html"
+
+sessionStorage.clear()
 })
-
-
-
-
-
-
-
-
