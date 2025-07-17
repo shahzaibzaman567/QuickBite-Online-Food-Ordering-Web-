@@ -164,11 +164,11 @@ formsearch.addEventListener("submit", (event) => {
         container.innerHTML = ``;
 
         for (let i = 0; i < Title.length; i++) {
- 
+
             let card = document.createElement("div");
- 
+
             card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
- 
+
             card.innerHTML = `<img src=${Title[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
         <div class="card-body  container-fluid   ">
           <h5 class="card-title">${Title[i].title}</h5>
@@ -176,22 +176,22 @@ formsearch.addEventListener("submit", (event) => {
           <p   class="count" ></p>
           <button   class="btn w-100 btn-primary  add-to-cart"  data-index="${i}">Add  to  Cart </button>
         </div>`
- 
+
             container.appendChild(card);
 
-          
-            
- 
- 
+
+
+
+
         }
- 
-
-            }
-          
 
 
+    }
 
-    else if (searc === "all"  ||    searc === ""  ) {
+
+
+
+    else if (searc === "all" || searc === "") {
         container.innerHTML = ``;
 
         for (let i = 0; i < foodDetail.length; i++) {
@@ -212,18 +212,18 @@ formsearch.addEventListener("submit", (event) => {
 
         }
     }
-    else  if(Title.title!==searc)  {
-       alert(`Not Availabel  `) 
+    else if (Title.title !== searc) {
+        alert(`Not Availabel  `)
 
-       container.innerHTML = ``;
+        container.innerHTML = ``;
 
-       for (let i = 0; i < foodDetail.length; i++) {
+        for (let i = 0; i < foodDetail.length; i++) {
 
-           let card = document.createElement("div");
+            let card = document.createElement("div");
 
-           card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
+            card.className = "card col-12 col-sm-3 col-md-3  col-lg-3 col-xxl-3 ms-xxl-5 ms-lg-5 ms-md-4 ms-sm-2 ";
 
-           card.innerHTML = `<img src=${foodDetail[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
+            card.innerHTML = `<img src=${foodDetail[i].Img}  class="img img-fluid "  style="height: 300px;" height="60"  class="card-img-top" alt="...">
        <div class="card-body  container-fluid   ">
          <h5 class="card-title">${foodDetail[i].title}</h5>
          <p class="card-text">${foodDetail[i].prise}</p>
@@ -231,13 +231,13 @@ formsearch.addEventListener("submit", (event) => {
          <button   class="btn w-100 btn-primary  add-to-cart"  data-index="${i}">Add  to  Cart </button>
        </div>`
 
-           container.appendChild(card)
+            container.appendChild(card)
 
 
-       }
+        }
 
     }
-    });
+});
 
 
 
@@ -284,10 +284,3 @@ container.addEventListener("click", (e) => {
     }
 });
 
-let   Logout= document.querySelector("#Logout");
-
-Logout.addEventListener("click",()=>{
-window.location.href="index.html"
-
-sessionStorage.clear()
-})

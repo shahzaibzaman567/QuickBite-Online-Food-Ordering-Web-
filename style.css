@@ -1,33 +1,37 @@
-#pink{
+#pink {
     width: 500px;
 }
 
 
-a{
+a {
     position: relative;
     text-decoration: none;
-    padding-bottom:1px  ;
-    
+    padding-bottom: 1px;
+
 }
-a::after{
-content: "";
-position: absolute;
-left: 0%;
-right: 0%;
-width: 0%;
-bottom: 0%;
-height: 2px;
-background-color: rgb(255, 255, 255);
-transition: 1s ease;
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    width: 0%;
+    bottom: 0%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transition: 1s ease;
 
 
 }
-a:hover::after{
-width: 100%;
+
+a:hover::after {
+    width: 100%;
 }
-#logout{
-    margin-left: 45%;
+
+#logout {
+    margin-left: 55%;
 }
+
 /* 
 @media (max-width:1068px){
     #logout{
@@ -40,11 +44,12 @@ width: 100%;
         margin-left: 50%;
     }   
 } */
-@media (max-width:1242px){
-    #logout{
+@media (max-width:1242px) {
+    #logout {
         margin-left: 41%;
-    }   
+    }
 }
+
 /* a {
     position: relative;
     text-decoration: none;
