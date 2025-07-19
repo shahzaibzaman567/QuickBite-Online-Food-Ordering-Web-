@@ -51,16 +51,6 @@ if (signup) {
     }
     )
 }
-// Another
-
-// if ( findpassword) {
-//     let Password=  document.querySelector("#exampleInputPassword1");
-//     Password.innerhtml="This email has already exist!!"
-//     Password.style.color="red"    
-//     Password.style.border="2px solid red"    
-// } 
-
-
 
 
 
