@@ -63,7 +63,6 @@ if (login) {
             //Login data
 
             Lemail: document.querySelector("#email2").value.trim(),
-            Lname: document.querySelector("#LName").value.trim(),
             Lpassword: document.querySelector("#password2").value.trim(),
         }
 
@@ -73,7 +72,6 @@ if (login) {
         let findUser = userdata.find(
             u =>
                 u.Semail === data.Lemail &&
-                u.SName === data.Lname &&
                 u.Spassword === data.Lpassword
         );
 

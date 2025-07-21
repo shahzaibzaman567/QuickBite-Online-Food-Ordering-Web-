@@ -23,6 +23,18 @@ a::after {
 
 
 }
+#Items::after{
+     content: "";
+    position: absolute;
+    left: n;
+    right: 0%;
+    width: 0%;
+    bottom: 0%;
+    height: 2px;
+    background-color: rgb(248, 1, 1);
+    transition: 1s ease;
+
+}
 
 a:hover::after {
     width: 100%;

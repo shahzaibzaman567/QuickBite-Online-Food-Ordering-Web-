@@ -3,59 +3,9 @@ body{
    padding-right: 6px;
 }
 #btn-group{
-    padding-left:100px ;
-    padding-top: 10px;
+    padding-top: 5px;
     display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-@media(max-width:322px){
-    #btn-group{
-        padding-left:70px ;
-        padding-top: 10px;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    
-}
-
-@media(max-width:248px){
-    #btn-group{
-        padding-left:35px ;
-        padding-top: 10px;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    
-}
-@media(max-width:718px){
-    #btn-group{
-        padding-left:30px ;
-        padding-top: 10px;
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    
-}
-@media(max-width:486px){
-    #btn-group{
-        padding-left:100px ;
-        padding-top: 10px;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        
-    }
-    
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
 }
