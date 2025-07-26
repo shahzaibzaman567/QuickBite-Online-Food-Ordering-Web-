@@ -23,6 +23,9 @@ a::after {
 
 
 }
+button{
+    cursor: pointer;
+}
 #Items::after{
      content: "";
     position: absolute;

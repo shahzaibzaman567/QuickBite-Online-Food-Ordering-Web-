@@ -15,41 +15,85 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-primary ">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" id="head-a" href="./home.HTML">🍔QuickBite</a>
-          <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-white  ms-5"  href="./home.html">Home</a>
-                  </li>
-                <li class="nav-item">
-                <a class="nav-link text-white  ms-5" aria-current="page " href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white  ms-5" href="#">Contact</a>
-              </li>
-            </ul>
-            
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="logout">
-                <li class="nave-items  ms-5">
-                    <button type="button" class="btn btn-danger btn-fluid text-white ms-5 " id="Logout" >Logout</button>
-                </li>
-                </nav>
+  <nav class="navbar navbar-expand-lg   bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand " style="color: aliceblue;" href="index.html"> 🍔 QuickBite
+
+      </a>
+      <button class="navbar-toggler  bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link  text-white text-white crumb" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white  crumb" href="#">Cart</a>
+          </li>
+
+          </li>
+          <li class="nav-item active ">
+            <a class="nav-link  text-white crumb" href="./order.html">Order-Now</a>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <button class="btn btn-danger text-white border-danger  me-2" id="Logout" >Logout</button>
+          <button id="Login" class="btn btn-danger   text-White border-danger " data-bs-toggle="modal"
+          data-bs-target="#LoginModal" type="submit">Total-prise</button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
                 <div class="py-3" style="background-color: rgb(23, 70, 213);">
-                  <div class="shocontainer mb-2 ps-1   d-flex  gap-1   flex-wrap justify-content-center " >
+                  <div class="shocontainer mb-2 ps-1  pe-1 d-flex  gap-1   flex-wrap justify-content-center " >
                     
-                    <div>
-                      <div>
-              
+                  </div>
+                </div>
+                        <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="LoginModalLabel">Total Prise of items</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form id="form1">
+                                  <table  class="w-100" id="table">
+                                    <tr>
+                                      <th>Items</th>
+                                      <th>Quantity</th>
+                                      <th>Total-Prise</th>
+                                    </tr>
+
+                                  </table>
+                                  <table  class="w-100" >
+
+                                    <tr>
+                                      <th>Total =</th>
+                                      <td colspan="2" width="90"  class="total"></td>
+                                         
+                                  </tr>
+                                  </table>
+
+                                </form>
+<p></p>                                
+            <button type="submit" class="btn btn-primary">Order-Now</button>
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                                    
 
               <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
               <script src="About.js" ></script>
               <script   src="./head.js"></script>
+              
 </body>
 </html>

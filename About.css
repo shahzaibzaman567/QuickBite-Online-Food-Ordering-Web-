@@ -1,6 +1,6 @@
 body{
    background-color:  rgb(23, 70, 213);
-   padding-right: 6px;
+   /* padding-right: 6px; */
 }
 #btn-group{
     padding-top: 5px;
@@ -8,4 +8,38 @@ body{
     flex-direction: row;
     justify-content: center;
     gap: 5px;
+}
+table{
+background-color: rgb(185, 181, 176);
+border: 3px solid   black;
+border-radius: 7px;
+
+
+}
+tr{
+    border-left: 2px    solid   white  ;
+
+}
+th,td{
+    font-size: 20px;
+    color: black;
+    border-top: 1px solid   black;
+    border-bottom: 3px  solid  black;
+    border-left: 2px    solid   white  ;
+    padding-left: 1px;
+    border-right: 1px  solid    white ;
+
+}
+
+th:hover{
+    background-color: blue;
+    color: white;
+    
+
+}
+td:hover{
+    background-color: blue;
+    color: white;
+    
+
 }
