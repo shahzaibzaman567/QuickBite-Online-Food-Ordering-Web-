@@ -7,7 +7,7 @@ const signup = document.querySelector("#form2");
 
 
 // checking 
-console.log(login, signup)
+// console.log(login, signup)
 
 //1//signup form on submiting
 if (signup) {

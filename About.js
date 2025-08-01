@@ -29,7 +29,7 @@ Shoping.forEach((Shoping, i) => {
 
 
 });
-console.log(Cards)
+// console.log(Cards)
 // count[i].innerHTML=Shoping.quantity;
 ///is ma shoping jo ha wo os ka index par chalta ha to to jitna obj aya ga os ma btn hoga or 
 //is liya ya har har kisi par chalta ha
@@ -49,15 +49,15 @@ container.addEventListener("click", (e) => {
         let tdtotal = document.querySelector(".total")
 
 
- tdtotal.innerHTML=Number(tdtotal.innerHTML)    - Number (prise[index].innerHTML)
+        tdtotal.innerHTML = Number(tdtotal.innerHTML) - Number(prise[index].innerHTML)
         quantity[index].innerHTML = 0
         prise[index].innerHTML = 0;
 
         // console.log( typeof   )
 
-     
+
     }
-})  
+})
 
 let count = document.querySelectorAll(".count");
 let plus = document.querySelectorAll(".plus");
@@ -109,23 +109,23 @@ Shoping.forEach((Shoping, i) => {
         let tdtotal = document.querySelector(".total")
 
 
-        
-        
+
+
 
 
         if (count[i].innerHTML == 0) {
-            
+
             count[i].innerHTML = 0;
-            
-            tdtotal.innerHTML = Number(tdtotal.innerHTML)   
-            
+
+            tdtotal.innerHTML = Number(tdtotal.innerHTML)
+
         } else {
-            
+
             count[i].innerHTML = --Shoping.quantity;
-            
+
             quantity[i].innerHTML = Shoping.quantity
             prise[i].innerHTML = Shoping.prise * Shoping.quantity;
-            
+
             tdtotal.innerHTML = Number(tdtotal.innerHTML) - Shoping.prise;
 
         }
@@ -194,7 +194,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
         let result = acc + curr
-        
+
         console.log(result)
         return result;
 
@@ -205,10 +205,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 
-console.log(redu)
+    console.log(redu)
 
 })
-
+    
+    table.innerHTML+=
+    `                                    <tr>
+    <th>Total =</th>
+    <td colspan="2" width="90"  class="total"></td>
+       
+</tr>`
+    ;
 
 
 

@@ -26,18 +26,18 @@ let foodDetail = [
         prise: 1500
 
     }, {
-        title: "chiken",
+        title: "chicken",
         Img: "./images/chiken.jpg",
         prise:  2000
 
     },
     {
-        title: "rostChiken",
+        title: "rostChicken",
         Img: "./images/chiken2.jpg",
         prise:  1000
 
     }, {
-        title: "crispi   Chiken",
+        title: "crispi   Chicken",
         Img: "./images/chiken3.jpg",
         prise:   1500
 
@@ -71,12 +71,12 @@ let foodDetail = [
         prise:   1400
 
     }, {
-        title: "chiken   Rost",
+        title: "chicken   Rost",
         Img: "./images/Goat-Meet.jpg",
         prise:   1600
 
     }, {
-        title: "chiken,Juice",
+        title: "chicken,Juice",
         Img: "./images/hq720.jpg",
         prise:   1700
 
@@ -113,7 +113,7 @@ let foodDetail = [
     },
 
     {
-        title: "tandori  Chiken",
+        title: "tandori  Chicken",
         Img: "./images/Palo-Full-chiken.jpg",
         prise:   1350,
     }

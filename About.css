@@ -37,9 +37,17 @@ th:hover{
     
 
 }
+.table2{
+    
+
+}
 td:hover{
     background-color: blue;
     color: white;
     
+
+}
+#tablehead{
+    overflow-x: auto;
 
 }
