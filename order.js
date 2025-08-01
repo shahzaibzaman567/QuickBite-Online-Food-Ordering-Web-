@@ -31,7 +31,6 @@ setTimeout(()=>{
     .then((data)=>{
     
         console.log(data) 
-Loader.remove()
 Loader.classList.remove("loader");
         Loader.classList.add("After");
         Loader.innerHTML=`<h1>Your Order Has Been Placed!</h1>`;
