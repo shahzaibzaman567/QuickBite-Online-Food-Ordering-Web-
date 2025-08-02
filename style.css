@@ -89,4 +89,15 @@ box-shadow: 10px 10px 10px  ;
   a:hover::after {
     width: 100%;
   } */
-  
+  .removeborder{
+    border-bottom: none;
+    text-decoration: none;
+    color: white;
+    padding-left: 2%;
+    
+}
+
+.removeborder::after {
+    content: "";
+    position: relative;
+  }

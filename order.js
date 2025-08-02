@@ -2,19 +2,18 @@
 
 
 
-let     orderbtn=document.querySelector("#order");
 
+let     detail=document.querySelector("#orderdetail");
 
-orderbtn.addEventListener("click",()=>{
+detail.addEventListener("submit",()=>{
 
 let   sesssionData=JSON.parse(sessionStorage.getItem("userShoping")) || [];  
-let     detail=document.querySelector("#orderdetail");
 let     Loader=document.querySelector("#Loader");
 let     spinner=document.querySelector("#spinner");
 
 // console.log(sesssionData.length)
 
-if(sesssionData.length  >= 1){
+if(sesssionData.length  >= 1 ){
 
     
 
